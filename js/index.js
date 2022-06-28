@@ -20,12 +20,13 @@ window.addEventListener('load', function(e){
 
       //TimeZones     
       const timeZonesList =
-      [{name: "elsalvador", offset: -6},
-       {name: "newyork", offset: -4},
-       {name: "brasilia", offset: -3},
-       {name: "buenosareas", offset: -3},
-       {name: "sonora", offset: -7}
-      ]
+        [
+          {name: "elsalvador", offset: -6},
+          {name: "newyork", offset: -4},
+          {name: "brasilia", offset: -3},
+          {name: "buenosareas", offset: -3},
+          {name: "sonora", offset: -7}
+        ];
 
       timeZonesList.forEach(timeZone => {
           const destinationOffsetValue  = timeZone.offset;

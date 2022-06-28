@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Clock</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript">
+    function updateTime() {
+      var svTime = new Date().toLocaleString("en-US", {timeZone: "America/El_Salvador"});
+      var usTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+      var brTime = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+      var mxTime = new Date().toLocaleString("en-US", {timeZone: "America/Mexico_City"});
+      var arTime = new Date().toLocaleString("en-US", {timeZone: "America/Argentina/Buenos_Aires"});
+      document.getElementById("svTime").innerHTML = svTime; console.log(svTime)
+      document.getElementById("brTime").innerHTML = brTime;
+      document.getElementById("usTime").innerHTML = usTime;
+      document.getElementById("mxTime").innerHTML = mxTime;
+      document.getElementById("arTime").innerHTML = arTime;
+    }
+  </script>
+</head>
+<body>
+
+    <div class="clock elsalvador">
+        <div class="clock-face">
+          <div class="hand hour-hand elsalvador"></div>
+          <div class="hand min-hand"></div>
+          <div class="hand second-hand"></div>
+          <div class="center"></div>
+        </div>
+        <div class="outer-clock-face">
+          <div class="marking marking-one"></div>
+          <div class="marking marking-two"></div>
+          <div class="marking marking-three"></div>
+          <div class="marking marking-four"></div>
+        </div>
+        <div class="label">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg"></img>
+          <p>San Salvador, El Salvador</p>
+        </div>
+        <p id="svTime"></p>
+    </div>
+
+    <div class="clock newyork">
+      <div class="clock-face">
+        <div class="hand hour-hand newyork"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center"></div>
+      </div>
+      <div class="outer-clock-face">
+        <div class="marking marking-one"></div>
+        <div class="marking marking-two"></div>
+        <div class="marking marking-three"></div>
+        <div class="marking marking-four"></div>
+      </div>
+      <div class="label">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"></img>
+        <p>New York,  USA</p>
+      </div>
+      <p id="usTime"></p>
+    </div>
+
+    <div class="clock brasilia">
+      <div class="clock-face">
+        <div class="hand hour-hand brasilia"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center"></div>
+      </div>
+      <div class="outer-clock-face">
+        <div class="marking marking-one"></div>
+        <div class="marking marking-two"></div>
+        <div class="marking marking-three"></div>
+        <div class="marking marking-four"></div>
+      </div>
+      <div class="label">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"></img>
+        <p>Porto Alegre,  Brazil</p>
+      </div>
+      <p id="brTime"></p>
+    </div>
+
+    <div class="clock buenosareas">
+      <div class="clock-face">
+        <div class="hand hour-hand buenosareas"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center"></div>
+      </div>
+      <div class="outer-clock-face">
+        <div class="marking marking-one"></div>
+        <div class="marking marking-two"></div>
+        <div class="marking marking-three"></div>
+        <div class="marking marking-four"></div>
+      </div>
+      <div class="label">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"></img>
+        <p>Buenos Aires,  Argentina</p>
+      </div>
+      <p id="arTime"></p>
+    </div>
+
+    <div class="clock sonora">
+      <div class="clock-face">
+        <div class="hand hour-hand sonora"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center"></div>
+      </div>
+      <div class="outer-clock-face">
+        <div class="marking marking-one"></div>
+        <div class="marking marking-two"></div>
+        <div class="marking marking-three"></div>
+        <div class="marking marking-four"></div>
+      </div>
+      <div class="label">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"></img>
+        <p>Sonora, Mexico</p>
+      </div>
+      <p id="mxTime"></p>
+    </div>
+    
+<script src="js/index.js"></script>
+</body>
+</html>

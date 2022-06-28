@@ -14,13 +14,9 @@ window.addEventListener('load', function(e){
       secondHand.forEach(hand => hand.style.transform = `rotate(${secondsDegrees}deg)`);
       minsHand.forEach(hand => hand.style.transform = `rotate(${minsDegrees}deg)`);
 
-      //Get hours 
-      //local time in msec
-      const  localTime = now.getTime();
-      //local UTC offset (in min) convert to msec
-      const localOffset = now.getTimezoneOffset()*60*1000;
-      //utc time in msec
-      const utcTime = localTime + localOffset;
+      const  localTimeValue = now.getTime();
+      const localOffsetByTimezone = now.getTimezoneOffset()*60*1000;
+      const utcTimeValue = localTimeValue + localOffsetByTimezone;
 
       //TimeZones     
       const timeZonesList =
@@ -32,11 +28,11 @@ window.addEventListener('load', function(e){
       ]
 
       timeZonesList.forEach(timeZone => {
-          const destinationOffset  = timeZone.offset;
-          const destinationTime = utcTime + (3600000*destinationOffset);
-          const destinationDate = new Date(destinationTime);
-          const hour = destinationDate.getHours();
-          const min = destinationDate.getMinutes();
+          const destinationOffsetValue  = timeZone.offset;
+          const destinationTimeValue = utcTimeValue + (3600000*destinationOffsetValue);
+          const destinationDateValue = new Date(destinationTimeValue);
+          const hour = destinationDateValue.getHours();
+          const min = destinationDateValue.getMinutes();
           const hourDegrees = ((hour / 12) * 360) + ((min/60)*30) + 90;
 
           document.querySelector('.hand.'+ timeZone.name).style.transform = `rotate(${hourDegrees}deg)`;
